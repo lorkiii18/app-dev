@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HFA Admin Portal</title>
+        <link rel="stylesheet" href="admin.css">
+        <link rel="stylesheet" href="admincontent.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    </head>
+
+    <body>
+        <!-- navbar -->
+        <header>
+            <nav class="navbar">
+
+                <button id="open-sidebar" title="open-sidebar"><i class="fas fa-bars"></i></button>
+                <a href="#" class="logo">
+                    <img href="#" src="../assets/transparent_logo.png" alt="school_logo">
+                </a>
+                <h3 class="schoolname">Holy Family Academy of Sta Maria Bulacan Inc.</h3>
+
+                <div class="nav-icons">
+                    <a href="#notifications" title="Notifications" class="nav-icon">
+                        <i class="fas fa-bell"></i>
+                    </a>
+                    <a href="#messages" title="Messages" class="nav-icon">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+
+            </nav>
+        </header>
+
+        <!-- sidebar -->
+
+        <aside class="sidebar">
+            <button id="close-sidebar" title="close-sidebar"><i class="fas fa-times"></i></button>
+
+            <div class="user-info">
+                <h3 class="admin-name">Admin Name</h3>
+                <p class="admin-id">ID: 1234567890</p>
+            </div>
+
+            <!-- sidebar -->
+            <nav class="sidebar-nav">
+                <ul class="sidebar-links">
+
+                    <li>
+                        <a href="#dashboard"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#student-management" class="dropdown-toggle">
+                            <i class="fas fa-user-graduate"></i> <span>Student Management</span> <i
+                                class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#student-records"><i class="fa-solid fa-file-lines"></i> Student Records</a>
+                            </li>
+                            <li><a href="#requirements-tracker"><i class="fas fa-clipboard-check"></i> Requirements
+                                    Tracker</a></li>
+                            <li><a href="#balance-overview"><i class="fa-solid fa-file-invoice"></i> Balance
+                                    Overview</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#student-management" class="dropdown-toggle">
+                            <i class="fas fa-user-graduate"></i> <span>Teacher Management</span> <i
+                                class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#Teacher-records"><i class="fa-solid fa-file-lines"></i> Teacher
+                                    Records</a></li>
+                            <li><a href="#requirements-tracker"><i class="fas fa-clipboard-check"></i> Requirements
+                                    Tracker</a></li>
+                            <li><a href="#grade-submission"><i class="fa-regular fa-book"></i> Grade Submission </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">
+                            <i class="fas fa-users-cog"></i> <span>User Management</span> <i
+                                class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#edit-accounts"><i class="fas fa-user-plus"></i> Edit Accounts </a></li>
+                            <!-- can edit and deactivate the account -->
+                            <li><a href="#password-resets"><i class="fas fa-key"></i> Password Resets</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#announcements" class="dropdown-toggle">
+                            <i class="fas fa-bullhorn"></i> <span>Announcement</span> <i
+                                class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#post-announcement"><i class="fas fa-plus-circle"></i> Post Announcement</a>
+                            </li>
+                            <li><a href="#news-editor"><i class="fas fa-newspaper"></i> News Editor </a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- secondary sidebar -->
+                <nav class="secondary-sidebar">
+                    <ul class="sidebar-links">
+                        <li><a href="#school-calendar"><i class="fas fa-calendar-alt"></i> School Calendar</a>
+                        </li>
+
+                        <!-- Admin Settings Dropdown -->
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle">
+                                <i class="fas fa-cog"></i> Settings <i class="fas fa-chevron-down"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#profile-settings"><i class="fas fa-user-cog"></i> Profile Settings</a>
+                                </li>
+                                <li><a href="#notification-settings"><i class="fas fa-bell"></i> Notification
+                                        Settings</a></li>
+                                <li><a href="#system-preferences"><i class="fas fa-sliders-h"></i> System
+                                        Preferences</a></li>
+                            </ul>
+                        </li>
+                        <!-- Single Links -->
+                        <li><a href="#about"><i class="fas fa-info-circle"></i> About</a></li>
+                        <li class="logout-link"><a href="/login_component/login.html" class="logout-btn" id="logout-btn"><i class="fas fa-sign-out-alt"></i>
+                                Sign Out</a>
+                        </li>
+                    </ul>
+                </nav>
+            </nav>
+        </aside>
+
+        <section id="dashboard">
+            <div class="main-content">
+                <!-- Dashboard Header -->
+                <div class="dashboard-header">
+                    <h1>Administrator Dashboard</h1>
+                    <div class="header-actions">
+                        <div class="datetime-widget">
+                            <div class="current-date">September 5, 2023</div>
+                            <div class="current-time">10:15 AM</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Stats -->
+                <div class="quick-stats">
+                    <div class="stat-card total-students">
+                        <h3><i class="fas fa-user-graduate"></i> Total Students</h3>
+                        <p>1,200</p>
+                    </div>
+                    <div class="stat-card total-teachers">
+                        <h3><i class="fas fa-chalkboard-teacher"></i> Total Teachers</h3>
+                        <p>75</p>
+                    </div>
+                    <div class="stat-card total-classes">
+                        <h3><i class="fas fa-school"></i> Total Classes</h3>
+                        <p>30</p>
+                    </div>
+
+                </div>
+                <!-- Analytics Grid -->
+                <div class="analytics-grid">
+                    <!-- Enrollment Status -->
+                    <div class="analytics-card">
+                        <div class="card-header">
+                            <h3 class="card-title"><i class="fas fa-user-clock"></i> Enrollment Status</h3>
+                            <a href="#" class="see-more">View All</a>
+                        </div>
+                        <div class="enrollment-progress">
+                            <div class="progress-item">
+                                <span class="progress-label">Completed</span>
+                                <span class="progress-count">142/200</span>
+                            </div>
+                            <div class="progress-item">
+                                <span class="progress-label">Pending Verification</span>
+
+                                <span class="progress-count">58/200</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="analytics-card">
+                        <div class="card-header">
+                            <h3 class="card-title"> <i class="fa-solid fa-clock-rotate-left"></i> Recent Activity</h3>
+                            <a href="#" class="see-more">View All</a>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Activity</th>
+                                    <th>User</th>
+                                </tr>
+
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2025-10-01</td>
+                                    <td>New student added</td>
+                                    <td>Admin</td>
+                                </tr>
+                                <tr>
+                                    <td>2025-10-02</td>
+                                    <td>Grade submitted</td>
+                                    <td>Teacher</td>
+                                </tr>
+                                <tr>
+                                    <td>2025-10-02</td>
+                                    <td>Grade submitted</td>
+                                    <td>Teacher</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Operational Overview -->
+                <div class="operations-grid">
+                    <!-- Quick Task Center -->
+                    <div class="operations-card quick-tasks">
+                        <h3><i class="fas fa-rocket"></i> Quick Task Center</h3>
+                        <div class="task-categories">
+                            <div class="task-column">
+                                <h4> Admission</h4>
+                                <button class="task-btn">Verify Documents</button>
+                                <button class="task-btn">Assign Classes</button>
+                            </div>
+                            <div class="task-column">
+                                <h4>Academics</h4>
+                                <button class="task-btn">Approve Grades</button>
+                                <button class="task-btn">Generate Reports</button>
+                            </div>
+                            <div class="task-column">
+                                <h4>User Management</h4>
+                                <button class="task-btn">Edit account</button>
+                                <button class="task-btn">Reset Passwords</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="update-container">
+                    <div class="updates-feed">
+                        <h3><i class="fas fa-bell"></i> Announcement and news</h3>
+                        <button id="post" class="post">
+                            <i class="fas fa-plus-circle"></i> Post Announcement
+                        </button>
+                        <div class="updates-list">
+                            <div class="update-item">
+                                <p><strong>New Enrollment Deadline:</strong> September 30, 2023</p>
+                            </div>
+                            <div class="update-item">
+                                <p><strong>Parent-Teacher Meeting:</strong> October 5, 2023</p>
+                            </div>
+                        </div>
+                        <button id="view-all" class="view-all-btn">
+                            View All Announcements
+                        </button>
+                    </div>
+                    <!-- Calendar Widget -->
+                    <div class="operations-card calendar-widget">
+                        <h3><i class="fas fa-calendar-alt"></i> Academic Calendar</h3>
+                        <div class="calendar-container">
+                            <div class="calendar-header">
+                                <span>September 2023</span>
+                                <div class="calendar-controls">
+                                    <button class="btn-prev">
+                                        << /button>
+                                            <button class="btn-next">></button>
+                                </div>
+                            </div>
+                            <div class="calendar-grid">
+                                <!-- Calendar days would be dynamically generated -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- Other Sections -->
+        <section id=" Student-records">
+            <h2>Student Records</h2>
+            <p>Manage and view student records.</p>
+            <!-- Student records content would go here -->
+
+        </section>
+
+        <section id="Teacher/Staff Management">
+            <h2>Teacher/Staff Management</h2>
+            <p>Manage and view teacher/staff records.</p>
+            <!-- Teacher/Staff records content would go here -->
+        </section>
+
+        <section id="User-Management">
+            <h2>User Management</h2>
+            <p>Manage user accounts and permissions.</p>
+            <!-- User management content would go here -->
+        </section>
+
+        <section id="announcement-and-news">
+            <h2>School News & Announcements</h2>
+            <p>Stay updated with the latest school news and announcements.</p>
+            <!-- News content would go here -->
+        </section>
+
+
+        <section id="School Calendar">
+            <h2>School Calendar</h2>
+            <p>View and manage the school calendar.</p>
+            <!-- School calendar content would go here -->
+        </section>
+
+        <section id="profile-settings">
+            <h2>Profile Settings</h2>
+            <p>Manage your profile settings.</p>
+            <!-- Profile settings content would go here -->
+            <section id="about">
+                <h2>About the School</h2>
+                <p>Learn more about Holy Family Academy of Sta Maria Bulacan Inc.</p>
+                <!-- About content would go here -->
+            </section>
+
+
+            <script src="admin.js"></script>
+    </body>
+
+</html>

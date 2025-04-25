@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+		<link rel="stylesheet" href="login.css" />
+	</head>
+
+	<body>
+		<div class="back">
+			<button id="backbtn" class="backbtn"> Back to Dashboard</button>
+
+		</div>
+		<h2> Hello Familians, login your account now!</h2>
+		<div class="popup_login" id="popup_login">
+			<div class="form-container loginTA-container">
+				<form action="#">
+					<h1 class="LoginTA">Login As Teacher</h1>
+
+					<input type="email" placeholder="Email" />
+					<input type="password" placeholder="Password" />
+					<button id="signIn-teacher" class="signIn-teacher">Sign in as Teacher</button>
+				</form>
+			</div>
+
+			<div class="form-container sign-in-container">
+				<form action="#">
+					<h1>Sign in as Student</h1>
+
+					<input type="email" placeholder="Email" />
+					<input type="password" placeholder="Password" />
+					<a href="#">Forgot your password?</a>
+					<button id="signIn-std" class="signIn-std">Sign In as Student</button>
+				</form>
+			</div>
+
+			<!-- overlay panels -->
+			<div class="overlay-container">
+				<div class="overlay">
+					<!-- overlay panel for students  left side overlay-->
+					<div class="overlay-panel overlay-left">
+						<h1>Hello Students!</h1>
+						<p>asd asdfasfg a asgasf asfdf</p>
+						<button class="ghost" id="signInST">Sign In</button>
+						<button class="ghost2" id="signInAdminFromStudent">Sign in as Admin</button>
+					</div>
+					<!-- overlay panel for admins and teachers on the right side -->
+					<div class="overlay-panel overlay-right">
+						<h1>Hello Admin and Teachers!</h1>
+						<p> ausgbdub ahsjd iakjs iqj asd</p>
+						<button class="ghost" id="signInTC">Sign in as a Teacher</button>
+						<button class="ghost2" id="signInAdmin">Sign in as Admin</button>
+					</div>
+
+				</div>
+
+			</div>
+			<!-- for admin panels  -->
+			<div class="overlay-panelAdmin" id="overlayPanelAdmin">
+				<h1>Hello Admin!</h1>
+				<p>asffa a asfda</p>
+				<input type="email" placeholder="Email" />
+				<input type="password" placeholder="Password" />
+				<button class="ghost2" id="signIn-admin" class="signIn-admin">Sign in as Admin</button>
+				<div class="admin-nav-buttons">
+
+					<!-- buttons navigating for student and teacher -->
+					<button class="ghost admin-nav-btn" id="adminToStudent">Student Login</button>
+					<button class="ghost admin-nav-btn" id="adminToTeacher">Teacher Login</button>
+				</div>
+			</div>
+		</div>
+		<script src="login.js"></script>
+	</body>
+
+</html>

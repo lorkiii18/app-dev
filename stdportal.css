@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Zen+Antique+Soft&display=swap');
+
+/* Base Styles */
+  /* for navigation design */
+  header{
+    width: 100%;
+    background: linear-gradient(to right, #347605, #5ba803);
+    position: fixed;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+
+
+}
+*{
+  font-family: 'Josefin Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    background-color: #f5f5f5;
+
+  }
+.logo img{
+    width: 110px;
+    padding: 15px;
+}
+.logo{
+  display: flex;
+  align-items: center;
+}
+ul{
+  list-style: none;
+}
+.navbar .schoolname{
+  font-size: larger;
+}
+
+header .navbar {
+    color: #e7e7e7;
+    align-items: center;
+    display: flex;
+    padding: 5px 15px;
+}
+header .schoolname {
+    font-size: 1.5rem;
+    margin-left: 10px;
+    position: relative;
+    padding-left: 40px;
+}
+/* for open sidebar button */
+#open-sidebar {
+    display: flex;
+    font-size: 1.5rem;
+    background:none;
+    border-style: none;
+    cursor: pointer;
+    color: #e7e7e7;
+    padding: 10px 20px;
+}
+#open-sidebar:hover {
+    color: #fff;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1);
+}
+#open-sidebar:active {
+    transform: scale(0.5);
+}
+/* sidebar desgin */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #1f6e15;
+    color: white;
+    position: fixed;
+    left: -250px;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+    z-index: 1100;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar.show {
+    left: 0;
+}
+/* Navbar icons */
+.nav-icons {
+  margin-left: auto;
+  display: flex;
+  gap: 15px;
+  padding-right: 20px;
+}
+
+.nav-icon {
+  color: #e7e7e7;
+  font-size: 1.3rem;
+  transition: all 0.3s ease;
+  padding: 8px;
+}
+
+.nav-icon:hover {
+  color: #fff;
+  transform: translateY(-2px);
+}
+/* sidebar button */
+#close-sidebar {
+    position: absolute;
+    right: 10px;
+    top: 30px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.3rem;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    display: flex;;
+    transition: all 0.3s ease;
+}
+/* user info desgin */
+.user-info {
+    padding: 30px 20px;
+    text-align: center;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    margin-top: 20px;
+}
+
+.user-info .avatar {
+    font-size: 3rem;
+    color: #e7e7e7;
+    margin-bottom: 10px;
+}
+
+.user-info .stdname {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+/* sidebar links desgin */
+.sidebar .sidebar-links {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
+}
+.sidebar  ul li a{
+    display: block;
+    padding: 10px 0;
+    color: #e7e7e7;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+.sidebar ul li a:hover  {
+    background: #f6f6f6c3;
+    padding: 10px;
+    color:#54910f;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    transform: scale(1); 
+}
+.secondary-sidebar{
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+    display: block;
+    padding: 10px 0;
+    color: #e7e7e7;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+.profile-links{
+    display: block;
+    padding: 10px 0;
+    color: #e7e7e7;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+}   
+.profile-links ul li a{
+    display: block;
+    padding: 10px 0;
+    color: #e7e7e7;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+/* Media Queries */
+@media screen and (min-width: 992px) {
+    /* For desktop, the show sidebar is permanent if needed */
+    body.sidebar-permanent .sidebar {
+      left: 0;
+    }
+    
+    body.sidebar-permanent .main-content {
+      margin-left: 250px;
+    }
+    
+    body.sidebar-permanent #open-sidebar {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 991px) {
+    .main-content.with-sidebar {
+      margin-left: 0;
+    }
+    
+    .overlay.active {
+      display: block;
+    }
+  }
+  .navbar .schoolname {
+   padding: 10px 10px;
+  }
+  
+  .logo img{
+   width: 70px;
+    padding: 10px 10px;
+  }
+  .navbar {
+    padding: 5px 10px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+  }
+  
+  @media screen and (max-width: 768px) {
+ 
+    
+    .logo img {
+      width: 80px;
+      padding: 10px;
+    }
+.navbar .schoolname {
+      font-size: 1rem;
+      max-width: 150px;
+      
+    }
+    header .navbar {
+      justify-content: space-between;
+
+   
+    }
+    .nav-icons{
+      padding: 5px;
+    }
+    .nav-icon{
+      font-size: 1rem;
+
+    }
+  }
+ 
+  
+  @media screen and (max-width: 480px) {
+    .navbar {
+      padding: 5px 5px;
+      height: auto;
+      display: flex;
+      
+      align-content: center;
+    }
+    .schoolname {
+      font-size: 1rem;
+      max-width: 150px;
+    }
+    
+    .logo img {
+      width: 70px;
+      padding: 10px 10px;
+    }
+    
+    .user-info .avatar {
+      font-size: 2.5rem;
+    }
+    
+    .user-info .stdname {
+      font-size: 1rem;
+    }
+    
+    .user-info .std-id {
+      font-size: 0.8rem;
+    }
+  }

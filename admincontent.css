@@ -1,0 +1,294 @@
+.main-content {
+  position: static;
+  padding: 100px 20px 20px;
+  transition: margin-left 0.3s ease;
+  margin-left: 0;
+}
+
+.main-content .with-sidebar{
+  margin-left: 300px;
+}
+.sidebar.show + .main-content  {
+  margin-left: 300px;
+}
+.main-content.with-sidebar {
+  margin-left: 250px;
+  max-width: calc(1400px - 250px);
+}
+  /* Section Styling */
+  section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    min-height: 500px;
+  }
+  
+  section:not(:target) {
+    display: none;
+  }
+  
+  section:target {
+    display: block;
+  }
+  
+  /* Dashboard section should be shown by default */
+  #dashboard {
+    display: block;
+  }
+/* Modern Dashboard CSS */
+.main-content {
+  display: grid;
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1400px;
+
+}
+/* for header in dashboard in admin */
+.dashboard-header {
+  margin-top: 80px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 2px solid #eee;
+}
+/* quick tasks design */
+.quick-tasks {
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+/* quick stats design */
+.quick-stats{
+  display: grid;
+  gap: 1rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
+  align-items: center;
+  text-align: center;
+}
+
+
+/* task categories design */
+.task-categories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+/* Analytics Card Design */
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin: 0;
+}
+
+.analytics-card {
+  background: linear-gradient(145deg, #ffffff, #f8fafb);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+  border: 1px solid rgba(241, 243, 245, 0.6);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.analytics-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+}
+
+.analytics-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #1f6e15 0%, #4CAF50 100%);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(31, 110, 21, 0.1);
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a4d12;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.enrollment-progress {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  padding: 0.5rem 0;
+}
+
+.progress-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.progress-label {
+  font-size: 0.95rem;
+  color: #4a5568;
+  flex: 1;
+}
+
+.progress-count {
+  font-weight: 600;
+  color: #1f6e15;
+  min-width: 70px;
+  text-align: right;
+}
+
+
+
+/* Enhanced Table Styling */
+.analytics-card table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+;
+}
+
+.analytics-card th {
+  font-size: 0.9rem;
+  color: #4a5568;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  background: rgba(33, 123, 21, 0.126);
+}
+
+.analytics-card td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid rgba(241, 243, 245, 0.8);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.analytics-card tr:last-child td {
+  border-bottom: none;
+}
+
+.analytics-card tr:hover td {
+  background: rgba(31, 110, 21, 0.03);
+}
+
+/* Activity Type Indicators */
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .analytics-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .card-title {
+    font-size: 1rem;
+  }
+  
+  .progress-label {
+    font-size: 0.9rem;
+  }
+}
+.see-more {
+  color: #1f6e15;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 5px 10px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.see-more:hover {
+  background: rgba(31, 110, 21, 0.287);
+}
+/* Task List Design */
+.task-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.calendar-widget {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.update-items {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Interactive Elements */
+.task-btn {
+  padding: 0.75rem;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  text-align: left;
+  transition: all 0.2s ease;
+}
+
+.task-btn:hover {
+  background: #f0f2f5;
+  transform: translateX(4px);
+}
+
+.task-btn:active {
+  transform: translateX(2px);
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .operations-grid {
+      grid-template-columns: 1fr;
+  }
+  
+  .task-categories {
+      grid-template-columns: 1fr;
+  }
+}
+  @media (max-width: 768px) {
+    /* Mobile overlay behavior */
+    .sidebar.show + .main-content {
+      margin-left: 0;
+    }
+    .main-content {
+      padding: 80px 15px 15px;
+  }
+    .main-content.with-sidebar {
+      margin-left: 0;
+  }
+  .sidebar.show + .main-content {
+    margin-left: 0;
+  }
+  }
+
+

@@ -1,0 +1,605 @@
+.main-content + .schedule-container + .balance-content{
+  position: static;
+
+  padding: 100px 20px 20px;
+  transition: margin-left 0.3s ease;
+  margin-left: 0;
+}
+
+.main-content .with-sidebar, .schedule-container.with-sidebar, .balance-content.with-sidebar {
+  margin-left: 250px;
+  max-width: calc(1400px - 250px);
+}
+/* .sidebar.show + .main-content + .schedule-container + .balance-content {
+  margin-left: 250px;
+} */
+
+/* Section Styling */
+section {
+  background: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  min-height: 500px;
+}
+
+section:not(:target) {
+  display: none;
+}
+
+section:target {
+  display: block;
+}
+
+/* Dashboard section should be shown by default */
+#dashboard {
+  display: block;
+  
+}
+.main-content {
+  margin-left: 0;
+  padding: 100px 20px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  transition: margin-left 0.3s ease;
+}
+
+.main-content.with-sidebar {
+  margin-left: 250px;
+  max-width: calc(1400px - 250px);
+}
+/* dashboard-header design */
+.dashboard-header {
+  border-bottom: 2px solid #e0e6ed;
+  margin-bottom: 3rem;
+}
+.welcome-message h1 {
+  color: #1e7d23;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+.welcome-message p{
+  font-size: 1.2rem;
+}
+/* Dashboard Grid Layout */
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  padding: 0 20px; /* Added side padding */
+}
+
+/* Dashboard Card Design */
+.dashboard-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dashboard-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+}
+
+/* Card Header Styles */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid rgba(31, 110, 21, 0.1);
+}
+/* card titles */
+.card-title {
+  font-size: 1.3rem;
+  color: #1f6e15;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.card-title::before {
+  content: '';
+  width: 6px;
+  height: 24px;
+  background: #1f6e15;
+  border-radius: 3px;
+}
+/* see more design */
+.see-more {
+  color: #1f6e15;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 6px 12px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.see-more:hover {
+  background: rgba(31, 110, 21, 0.287);
+}
+
+/* Schedule contents*/
+.schedule-item {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 1rem;
+  padding: 1.25rem 0;
+  position: relative;
+}
+
+.schedule-item:not(:last-child)::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(47, 0, 0, 0.266);
+}
+
+.schedule-time {
+  font-weight: 600;
+  color: #2d3436;
+  background: rgba(31, 110, 21, 0.05);
+  padding: 8px 11px;
+  border-radius: 6px;
+  text-align: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+
+/* Balance Card  */
+.balance-amount {
+  font-size: 2.2rem;
+  color: #1f6e15;
+  margin: 1.5rem 0;
+  font-weight: 800;
+  text-shadow: 0 2px 4px rgba(31, 110, 21, 0.1);
+}
+
+.payment-deadline {
+  color: #d32f2f;
+  background: rgba(211, 47, 47, 0.05);
+  padding: 0.75rem;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+/* grade */
+.grade-container {
+  margin: 1.5rem 0;
+}
+
+.grade-label {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-content: space-between;
+  color: #2d3436;
+  font-size: 1.4rem;
+}
+.grade-label .subject{
+  font-weight: 800;
+  color: #178209;
+  margin-bottom: 1rem;
+}
+
+
+/* Announcements */
+.announcement-item {
+  padding: 1.25rem 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.announcement-item h3 {
+  color: #2d3436;
+  font-size: 1.1rem;
+}
+
+.announcement-item small {
+  color: #636e72;
+  font-size: 0.85rem;
+}
+
+/* Schedule Page Specific Styles */
+.schedule-header {
+  margin-top: 100px;
+  text-align: center;
+  margin-bottom: 2rem;
+
+}
+.schedule-grid{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+/* top  */
+.days-row {
+  display: grid;
+  gap:1rem;
+}
+/* grid layput */
+.top-days {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.bottom-days {
+  grid-template-columns: repeat(2, 1fr);
+  width: 80%;
+  margin: 0 auto;
+}
+
+.sched-column {
+  
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.schedule-item {
+  padding: 1rem;
+  margin: 0.8rem 0;
+  border-left: 3px solid #1f6e15;
+  background: rgba(31, 110, 21, 0.05);
+  border-radius: 4px;
+  text-align: center;
+}
+
+.time-slot {
+  font-size: 0.9rem;
+  color: #1f6e15;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.subject-code {
+  display: block;
+  font-size: 0.85rem;
+  color: #666;
+  
+}
+
+.subject {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.room {
+  color: #313131;
+  font-size: 1rem;
+  display: block;
+
+}
+
+/* balance content */
+
+.balance-header{
+  margin-top: 80px;
+}
+
+  #schoolbalance {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    max-width: 100%;
+}
+
+/* Balance Header */
+.balance-header {
+    margin-top: 80px;
+    text-align: center;
+}
+
+.semester-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.summary-card {
+    padding: 1.5rem;
+    border-radius: 8px;
+    background: #f8f9fa;
+    text-align: center;
+}
+
+.summary-card.paid {
+    background: #e8f5e9;
+    border: 1px solid #1f6e15;
+}
+
+.summary-card.remaining {
+    background: #ffebee;
+    border: 1px solid #d32f2f;
+}
+
+.summary-label {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+.summary-amount {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+/* Payment Cards Container */
+.payment-cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.payment-section h3 {
+    color: #1f6e15;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.payment-section h3 small {
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* Cards Grid */
+.cards-grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+/* Schedule Cards */
+.schedule-card {
+    padding: 1.5rem;
+    border-radius: 8px;
+    background: #fff;
+    border: 1px solid #eee;
+    transition: transform 0.2s ease;
+}
+
+.schedule-card:hover {
+    transform: translateY(-3px);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.due-date {
+    font-weight: 600;
+    color: #333;
+}
+
+.installment {
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.amount-due {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1f6e15;
+}
+
+/* History Cards */
+.history-card {
+    padding: 1.5rem;
+    border-radius: 8px;
+    background: #fff;
+    border: 1px solid #eee;
+}
+
+.payment-date {
+    font-weight: 600;
+    color: #333;
+}
+
+.payment-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.amount-paid {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1f6e15;
+}
+
+.balance-after {
+    color: #666;
+    font-size: 0.9rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid #eee;
+}
+/* grade content */
+#grades {
+  background: #f8f9fa;
+  padding: 2rem 0;
+}
+.semester-tabs {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.tab {
+  background: none;
+  border: 2px solid #1f6e15;
+  color: #1f6e15;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab.active {
+  background: #1f6e15;
+  color: white;
+}
+
+.grades-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+}
+
+.grade-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.subject-info h3 {
+  margin: 0 0 0.3rem 0;
+  color: #1f6e15;
+}
+
+.strand {
+  font-size: 0.8rem;
+  background: rgba(31, 110, 21, 0.1);
+  color: #1f6e15;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+.progress-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: conic-gradient(#5ba803 var(--percentage), #eee 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.progress-circle::before {
+  content: attr(data-percentage);
+  position: absolute;
+  background: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.percentage {
+  font-weight: 600;
+  color: #1f6e15;
+}
+
+.view-details {
+  display: inline-block;
+  margin-top: 2rem;
+  color: #1f6e15;
+  text-decoration: none;
+  font-weight: 600;
+  border: 2px solid #1f6e15;
+  padding: 0.5rem 1.5rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .grade-card {
+      flex-direction: column;
+      align-items: start;
+      gap: 1rem;
+  }
+  
+  .semester-tabs {
+      justify-content: center;
+  }
+}
+/* Responsive Design*/
+@media (max-width: 768px) {
+    .semester-summary,
+    .payment-cards-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .balance-header {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .summary-card {
+        padding: 1rem;
+    }
+    
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+  .top-days,
+  .bottom-days {
+    grid-template-columns: 1fr;
+  }
+  
+  .bottom-days {
+    width: 100%;
+  }
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .dashboard-grid {
+      grid-template-columns: 1fr;
+      padding: 0 10px;
+      gap: 1.5rem;
+  }
+  
+  .main-content {
+      padding: 80px 15px 15px;
+  }
+  
+  .dashboard-card {
+      padding: 1.5rem;
+  }
+  
+  .balance-amount {
+      font-size: 1.8rem;
+  }
+  .main-content.with-sidebar {
+    margin-left: 0;
+}
+.sidebar.show + .main-content {
+  margin-left: 0;
+}
+}
+
+
+

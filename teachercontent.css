@@ -1,0 +1,196 @@
+.main-content {
+    position: relative;
+    top: 0px;
+    padding: 100px 20px 20px;
+    transition: margin-left 0.3s ease;
+    margin-left: 0;
+  }
+  
+  .main-content.with-sidebar {
+    margin-left: 250px;
+  }
+  /* .sidebar.show + .main-content {
+    margin-left: 30px;
+  }
+   */
+  /* Section Styling */
+  section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    min-height: 500px;
+  }
+  
+  section:not(:target) {
+    display: none;
+  }
+  
+  section:target {
+    display: block;
+  }
+
+  /* dashboard style*/
+  #dashboard {
+    display: block;
+  }
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1.5rem;
+    max-width: 100%;
+    padding: 1.5rem;
+}
+/* Header Section */
+.dashboard-header {
+  border-bottom: 2px solid #e0e6ed;
+
+}
+.welcome-message h1 {
+  color: #1e7d23;
+  margin: 0;
+  font-size: 2rem;
+}
+
+.dashboard-card {
+  margin: 0.5rem 0;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.class-schedule{
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  display: grid;
+}
+/* schedule style */
+.schedule-item {
+  gap: 1rem;
+  padding: 1rem 0;
+  display: flex;
+  margin: 20px 10px;
+  border-left: 4px solid #1f6e15;
+  background: rgba(31, 110, 21, 0.05);
+  border-radius: 4px;
+}
+/* sched*/
+.schedule-time {
+  font-size: 1.2rem;
+  color: #1e7d23;
+  font-weight: 600;
+  text-align: center;
+  padding: 2rem 2rem;
+}
+/* subject design */
+.subject{
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 20px 10px;
+}
+/* grade progression */
+.grade-progress {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+}
+
+/* Progress Header */
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+/* quick stats grid design*/
+.quick-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.stat-item {
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 4px solid #4a5568;
+}
+
+.stat-item.urgent {
+  border-left-color: #c53030;
+  background: #fff5f5;
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.card-header h3 {
+  font-size: 1.5rem;
+  color: #1e7d23;
+  margin: 0;
+}
+.card-header a{
+  text-decoration: none;
+  color: #1e7d23;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+}
+.card-header a:hover{
+  color: #1e7d23;
+transform: translateX(5px);
+
+}
+/* action button styels */
+.action-btn {
+display: block;
+  background: #1e7d2327;
+  color: #1e7d23;
+  padding: 1rem 1rem;
+  margin: 1rem 0;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+.action-btn:hover {
+
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .dashboard-grid {
+      grid-template-columns: 1fr;
+  }
+  .schedule-item {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  
+  .room-number {
+    text-align: left;
+  }
+  
+  .calendar-grid {
+    grid-template-columns: repeat(7, minmax(30px, 1fr));
+  }
+  .sidebar-column {
+      order: -1;
+  }
+}
+  @media (max-width: 768px) {
+    /* Mobile overlay behavior */
+    .sidebar.show + .main-content {
+      margin-left: 0;
+    }
+  }

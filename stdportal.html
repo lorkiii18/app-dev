@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPHFA</title>
+    <link rel="stylesheet" href="stdportal.css">
+    <link rel="stylesheet" href="stdcontent.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            
+            <button id="open-sidebar" title="open-sidebar"><i class="fas fa-bars"></i></button>
+          <a href="#" class = "logo">
+            <img href ="#" src= "../assets/transparent_logo.png" alt="school_logo">
+          </a>
+            <h3 class="schoolname">Holy Family Academy of Sta Maria Bulacan Inc.</h3>
+
+            <div class="nav-icons">
+                <a href="#notifications" title="Notifications" class="nav-icon">
+                    <i class="fas fa-bell"></i>
+                </a>
+                <a href="#messages" title="Messages" class="nav-icon">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+           
+       </nav>
+      </header>
+    
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <button id="close-sidebar" title="Close Menu"><i class="fas fa-times"></i></button>
+     
+        <div class="user-info">
+            <div class="avatar">
+                <i class="fas fa-user-circle"></i>
+            </div>
+            <h3 class="stdname">Student Name</h3>
+            <p class="std-id">ID: 1234567890</p>
+        </div>
+    
+        <nav class="sidebar-nav">
+            <ul class="sidebar-links">
+                <li>
+                    <a href="#dashboard">
+                        <i class="fa-solid fa-house"></i>
+                        <span>Dashboard</span>
+                    </a>
+                <li>
+                    <a href="#schedule">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Schedule</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#schoolbalance">
+                        <i class="fas fa-wallet"></i>
+                        <span>Balance</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#grades">
+                        <i class="fa-solid fa-book"></i>
+                        <span>Grades</span>
+                    </a>
+                </li>
+             
+            </ul>
+                <nav class="secondary-sidebar">
+                    <ul class="sidebar-links">
+                    <li>
+                        <a href="#announcement-and-news">
+                            <i class="fas fa-newspaper"></i>
+                            <span>News</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#about">
+                            <i class="fas fa-info-circle"></i>
+                            <span>About</span>
+                        </a>
+                    </li>
+                </ul>
+                </nav>
+               <nav class="profile-links">
+                <ul class="sidebar-links">
+                <li>
+                    <a href="#profile-settings">
+                        <i class="fas fa-user"></i>
+                        <span>Profile Settings</span>
+                    </a>
+                </li>
+                <li class="logout-link">
+                    <a href="/login_component/login.html" id="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i>
+                        <span>Sign Out</span>
+                    </a>
+                </li>
+             </ul>
+            </nav>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+<section id="dashboard">
+    <div class="main-content" id="dashboard">
+        <div class="dashboard-header">
+            <div class="welcome-message">
+                <h1>Welcome to Student Dashboard</h1>
+                 <p class="subheader">Today is Thursday, September 5, 2025</p>
+            </div>
+        </div>
+        <div class="dashboard-grid">
+            <!-- Schedule Card -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h2 class="card-title">Today's Schedule</h2>
+                    <a href="#" class="see-more">View All</a>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">08:00 AM</div>
+                    <div>
+                        <h3>Mathematics 101</h3>
+                        <p>Room 201 • Dr. Smith</p>
+                    </div>
+                </div>
+                <div class="schedule-item">
+                    <div class="schedule-time">10:30 AM</div>
+                    <div>
+                        <h3>Science Lab</h3>
+                        <p>Lab Building 3 • Dr. Wilson</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Balance Card -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h2 class="card-title">Account Balance</h2>
+                    <a href="#" class="see-more">Details</a>
+                </div>
+                <div class="balance-amount">₱2,300.00</div>
+                <p class="payment-deadline">⏳ Deadline: March 30, 2024</p>
+            </div>
+
+            <!-- Grades Card -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h2 class="card-title">Grade Report</h2>
+                    <a href="#" class="see-more">View all</a>
+                </div>
+                <div class="grade-container">
+                    <div class="grade-label">
+                        <span class="subject">Mathematics</span>
+                        <span class="grade">85</span>
+                        <span class="subject">Physics</span>
+                        <span class="grade">85</span>
+                        <span class="subject">Pre Calculus</span>
+                        <span class="grade">90</span>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Announcements Card -->
+            <div class="dashboard-card">
+                <div class="card-header">
+                    <h2 class="card-title">Campus Updates</h2>
+                    <a href="#" class="see-more">All News</a>
+                </div>
+                <div class="announcement-item">
+                    <h3>🌿 Spiritual Retreat Update</h3>
+                    <p>New schedule confirmed for March 22-23</p>
+                    <small>2 hours ago • Office of Student Affairs</small>
+                </div>
+                <div class="announcement-item">
+                    <h3>📝 Final Examinations</h3>
+                    <p>Room assignments now available online</p>
+                    <small>1 day ago • Academic Office</small>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+</section>  
+            
+            <!-- Other Sections -->
+            <section id="schedule">
+                <div class="schedule-container" id="schedule">
+                  <div class="schedule-header">
+                    <h1>Holy Family Academy of Sta. Maria Bulacan Inc.</h1>
+                    <h2>Class Schedule</h2>
+                  </div>
+              
+                  <div class="schedule-grid">
+                    <!-- Top Row -->
+                     <!-- monday -->
+                    <div class="days-row top-days">
+                      <div class="sched-column">
+                        <h3>Monday</h3>
+                        <div class="schedule-item">
+                          <div class="time-slot">9:30 - 11:00 AM</div>
+                          <span class="subject-code">BIO 210</span>
+                          <div class="subject">Biology Lab</div>
+                          <div class="room">Lab Building 3</div>
+                        </div>
+                        <!-- Add more schedule items -->
+                        <div class="schedule-item">
+                            <div class="time-slot">11:00 AM- 1:00 PM</div>
+                            <span class="subject-code">ENG 120</span>
+                            <div class="subject">English Literature</div>
+                            <div class="room">Room 102</div>
+                          </div>
+                      </div>
+                      <!-- tuesday -->
+                      <div class="sched-column">
+                        <h3>Tuesday</h3>
+                        <div class="schedule-item">
+                          <div class="time-slot">9:30 - 11:00 AM</div>
+                          <span class="subject-code">BIO 210</span>
+                          <div class="subject">Biology Lab</div>
+                          <div class="room">Lab Building 3</div>
+                        </div>
+
+                        <div class="schedule-item">
+                            <div class="time-slot">7:30 - 8:30 AM</div>
+                            <span class="subject-code">CONTWD 1120</span>
+                            <div class="subject"> Contemporary World</div>
+                            <div class="room"> Room 401</div>
+                          </div>
+                      </div>
+
+              <!-- wednesday -->
+                      <div class="sched-column">
+                        <h3>Wednesday</h3>
+                        <div class="schedule-item">
+                          <div class="time-slot">8:00 - 9:30 AM</div>
+                          <span class="subject-code">ENG 120</span>
+                          <div class="subject">English Literature</div>
+                          <div class="room">Room 102</div>
+                        </div>
+
+                        <div class="schedule-item">
+                            <div class="time-slot">9:30 - 11:00 AM</div>
+                            <span class="subject-code"> GNMTH 1208</span>
+                            <div class="subject">General Mathematics</div>
+                            <div class="room">Room 403</div>
+                          </div>
+                      </div>
+                    </div>
+              
+                    <!-- Bottom Row -->
+                    <div class="days-row bottom-days">
+                      <div class="sched-column">
+                        <h3>Thursday</h3>
+                        <div class="schedule-item">
+                          <div class="time-slot">8:30 - 10:00 AM</div>
+                          <span class="subject-code">PHY 115</span>
+                          <div class="subject">Physics Lecture</div>
+                          <div class="room">Room 210</div>
+                        </div>
+                        <!-- Add more schedule items -->
+                      </div>
+              
+                      <div class="sched-column">
+                        <h3>Friday</h3>
+                        <div class="schedule-item">
+                          <div class="time-slot">8:00 - 9:30 AM</div>
+                          <span class="subject-code">MATH 102</span>
+                          <div class="subject">Algebra Review</div>
+                          <div class="room">Room 201</div>
+                        </div>
+                        <!-- Add more schedule items -->
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              
+            
+              <section class="balance" id="schoolbalance">
+                <div class="balance-content">
+                    <!-- Balance Header -->
+                    <div class="balance-header">
+                        <h2>School Balance</h2>
+                        <div class="semester-summary">
+                            <div class="summary-card">
+                                <div class="summary-label">Total Semester Fee</div>
+                                <div class="summary-amount">₱15,000.00</div>
+                            </div>
+                            <div class="summary-card paid">
+                                <div class="summary-label">Amount Paid</div>
+                                <div class="summary-amount">₱12,400.00</div>
+                            </div>
+                            <div class="summary-card remaining">
+                                <div class="summary-label">Remaining Balance</div>
+                                <div class="summary-amount">₱2,600.00</div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Payment Container -->
+                    <div class="payment-cards-container">
+                        <!-- Payment Schedule Cards -->
+                        <div class="payment-section">
+                            <h3>Payment Schedule <small> 2nd Semester 2025 </small></h3>
+                            <div class="cards-grid">
+                                <!-- installment Card -->
+                                <div class="schedule-card">
+                                    <div class="card-header">
+                                        <span class="due-date">Jan 5, 2025</span>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="installment">1st Installment</div>
+                                        <div class="amount-due">₱5,000.00</div>
+                                    </div>
+                                </div>
+            
+                                <!-- Installment Card -->
+                                <div class="schedule-card">
+                                    <div class="card-header">
+                                        <span class="due-date">Feb 5, 2025</span>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="installment">2nd Installment</div>
+                                        <div class="amount-due">₱5,000.00</div>
+                                    </div>
+                                </div>
+            
+                                <!-- Installment Card -->
+                                <div class="schedule-card">
+                                    <div class="card-header">
+                                        <span class="due-date">Mar 5, 2025</span>
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="installment">Final Installment</div>
+                                        <div class="amount-due">₱5,000.00</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- Payment History Cards -->
+                        <div class="payment-section">
+                            <h3>Payment History <small>2nd Semester 2025</small></h3>
+                            <div class="cards-grid">
+                                <!-- Payment Card -->
+                                <div class="history-card">
+                                    <div class="card-header">
+                                        <span class="payment-date">Jan 4, 2025</span>
+                                 
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="payment-details">
+                                            <div>Tuition Fee Payment</div>
+                                            <div class="amount-paid">₱2,600.00</div>
+                                        </div>
+                                        <div class="balance-after">
+                                            Remaining Balance: ₱12,400.00
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <!-- Payment Card -->
+                                <div class="history-card">
+                                    <div class="card-header">
+                                        <span class="payment-date">Feb 6, 2025</span>
+                          
+                                    </div>
+                                    <div class="card-content">
+                                        <div class="payment-details">
+                                            <div>Tuition Fee Payment</div>
+                                            <div class="amount-paid">₱2,600.00</div>
+                                        </div>
+                                        <div class="balance-after">
+                                            Remaining Balance: ₱9,800.00
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </section>
+            
+                <section id="grades">
+                    <div class="section-container">
+                        <div class="section-header">
+                            <h2>Senior High School Grades</h2>
+                            <div class="semester-tabs">
+                                <button class="tab active">1st Semester</button>
+                                <button class="tab">2nd Semester</button>
+                            </div>
+                        </div>
+                
+                        <!-- First Semester Grades -->
+                        <div class="grades-container active">
+                            <div class="grade-card">
+                                <div class="subject-info">
+                                    <h3>Core Mathematics</h3>
+                                    <span class="strand">STEM</span>
+                                </div>
+                                <div class="grade-display">
+                                    <div class="semester-grade">
+                                        <span class="percentage">92%</span>
+                                        <div class="progress-circle" style="--percentage:92"></div>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="grade-card">
+                                <div class="subject-info">
+                                    <h3>Earth and Life Science</h3>
+                                    <span class="strand">STEM</span>
+                                </div>
+                                <div class="grade-display">
+                                    <div class="semester-grade">
+                                        <span class="percentage">88%</span>
+                                        <div class="progress-circle" style="--percentage:88"></div>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="grade-card">
+                                <div class="subject-info">
+                                    <h3>21st Century Literature</h3>
+                                    <span class="strand">Core</span>
+                                </div>
+                                <div class="grade-display">
+                                    <div class="semester-grade">
+                                        <span class="percentage">91%</span>
+                                        <div class="progress-circle" style="--percentage:91"></div>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="grade-card">
+                                <div class="subject-info">
+                                    <h3>Physical Education</h3>
+                                    <span class="strand">Core</span>
+                                </div>
+                                <div class="grade-display">
+                                    <div class="semester-grade">
+                                        <span class="percentage">95%</span>
+                                        <div class="progress-circle" style="--percentage:95"></div>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="grade-card">
+                                <div class="subject-info">
+                                    <h3>Entrepreneurship</h3>
+                                    <span class="strand">Applied</span>
+                                </div>
+                                <div class="grade-display">
+                                    <div class="semester-grade">
+                                        <span class="percentage">89%</span>
+                                        <div class="progress-circle" style="--percentage:89"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                       
+                    </div>
+                </section>
+            
+            <section id="profile">
+                <h2>Student Profile</h2>
+                <p>Manage your personal information and settings.</p>
+                <!-- Profile content would go here -->
+            </section>
+            
+            <section id="admission">
+                <h2>Admission Information</h2>
+                <p>Learn about the admission process and requirements.</p>
+                <!-- Admission content would go here -->
+            </section>
+            
+            <section id="program">
+                <h2>Academic Programs</h2>
+                <p>Explore available programs and courses.</p>
+                <!-- Program content would go here -->
+            </section>
+            
+            <section id="announcement-and-news">
+                <h2>School News & Announcements</h2>
+                <p>Stay updated with the latest school news and announcements.</p>
+                <!-- News content would go here -->
+            </section>
+            
+            <section id="about">
+                <h2>About the School</h2>
+                <p>Learn more about Holy Family Academy of Sta Maria Bulacan Inc.</p>
+                <!-- About content would go here -->
+            </section>
+        </main>
+    </div>
+
+    <script src="stdportal.js"></script>
+</body>
+</html>

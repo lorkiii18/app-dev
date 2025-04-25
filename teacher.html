@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> SPHFA </title>
+        <link rel="stylesheet" href="teacher.css">
+        <link rel="stylesheet" href="teachercontent.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    </head>
+
+    <body>
+        <!-- navbar -->
+        <header>
+            <nav class="navbar">
+
+                <button id="open-sidebar" title="open-sidebar"><i class="fas fa-bars"></i></button>
+                <a href="#" class="logo">
+                    <img href="#" src="../assets/transparent_logo.png" alt="school_logo">
+                </a>
+                <h3 class="schoolname">Holy Family Academy of Sta Maria Bulacan Inc.</h3>
+                <div class="nav-icons">
+                    <a href="#notifications" title="Notifications" class="nav-icon">
+                        <i class="fas fa-bell"></i>
+                    </a>
+                    <a href="#messages" title="Messages" class="nav-icon">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </nav>
+        </header>
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <button id="close-sidebar" title="Close Menu"><i class="fas fa-times"></i></button>
+
+            <div class="user-info">
+                <div class="avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <h3 class="stdname">Teacher Name</h3>
+                <p class="std-id">ID: 1234567890</p>
+            </div>
+
+            <nav class="sidebar-nav">
+                <ul class="sidebar-links">
+                    <li>
+                        <a href="#dashboard">
+                            <i class="fa-solid fa-house"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    <li>
+                        <a href="#class-schedule">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Class Schedule</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#student-record">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <span>Student Record</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#grade-submission">
+                            <i class="fa-solid fa-book"></i>
+                            <span>Grade Submission</span>
+                        </a>
+                    </li>
+
+                </ul>
+                <nav class="secondary-sidebar">
+                    <ul class="sidebar-links">
+                        <li>
+                            <a href="#announcement-and-news">
+                                <i class="fas fa-newspaper"></i>
+                                <span>Announcements & News</span>
+                    
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#about">
+                                <i class="fas fa-info-circle"></i>
+                                <span>About</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <nav class="profile-links">
+                    <ul class="sidebar-links">
+                        <li>
+                            <a href="#profile-settings">
+                                <i class="fas fa-user"></i>
+                                <span>Profile Settings</span>
+                            </a>
+                        </li>
+                        <li class="logout-link">
+                            <a href="/login_component/login.html" id="logout-btn">
+                                <i class="fas fa-sign-out-alt"></i>
+                                <span>Sign Out</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </nav>
+        </aside>
+
+        <!-- dashboard content -->
+        <section id="dashboard">
+            <div class="main-content">
+                <!-- Dashboard Header -->
+                <div class="dashboard-header">
+                    <div class="welcome-message">
+                        <h1>Welcome to Teacher Dashboard</h1>
+                        <p class="subheader">Today is Thursday, September 5, 2025</p>
+                        <div class="quick-stats">
+                            <div class="stat-item">
+                                <span class="stat-value">2</span>
+                                <span class="stat-label">Classes Today</span>
+                            </div>
+                            <div class="stat-item urgent">
+                                <span class="stat-value">15</span>
+                                <span class="stat-label">Grades Pending</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-value">3</span>
+                                <span class="stat-label">New Announcements</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard-grid">
+                    <div class="dashboard-content">
+                        <!-- Dashboard Grid -->
+
+                        <!-- schedule content -->
+                        <div class="dashboard-card class-schedule">
+                            <div class="card class-schedule">
+                                <div class="card-header">
+
+                                    <h3><i class="fas fa-calendar-alt"></i>
+                                        Today's Schedule</h3>
+                                    <a href="#" class="view-all">Full Schedule →</a>
+                                </div>
+                                <div class="schedule-item">
+                                    <div class="schedule-time">08:00 AM</div>
+                                    <div class="subject">
+                                        <h3>Mathematics 101</h3>
+                                        <p>Room 201 • Dr. Smith</p>
+                                    </div>
+                                </div>
+                                <div class="schedule-item">
+                                    <div class="schedule-time">10:30 AM</div>
+                                    <div class="subject">
+                                        <h3>Science Lab</h3>
+                                        <p>Lab Building 3 • Dr. Wilson</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Grade content -->
+                        <div class="dashboard-card grade-progress">
+                            <!-- Card Header with Navigation -->
+                            <div class="card-header">
+                                <h3 class="card-title">
+                                    <i class="fas fa-tasks icon"></i>
+                                    Grade Submissions
+                                </h3>
+                                <a href="#" class="view-all" aria-label="View all grade submissions">
+                                    Details
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+                                <div class="progress-header">
+                                    <div class="subject-meta">
+                                        <h4 class="subject-name">Grade 10 Math</h4>
+                                    </div>
+                                    <span class="completion-percent">53%</span>
+                                </div>
+                            <!-- Second Subject -->
+                            <!-- <div class="subject-progress" role="progressbar" aria-valuenow="42" aria-valuemin="0"
+                                aria-valuemax="100"> -->
+                                <div class="progress-header">
+                                    <div class="subject-meta">
+                                        <div>
+                                            <h4 class="subject-name">Grade 12 Calculus</h4>
+
+                                        </div>
+                                    </div>
+                                    <span class="completion-percent">42%</span>
+                                </div>
+                                <!-- <div class="progress-track">
+                                    <div class="progress-fill calculus" style="width: 42%"></div>
+                                </div> -->
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                    <!-- Side Column -->
+                    <div class="side-column">
+                        <!-- Upcoming Deadlines -->
+                        <div class="dashboard-card compact">
+                            <div class="card-header">
+                                <h3><i class="fas fa-exclamation-circle"></i> Upcoming</h3>
+                            </div>
+                            <ul class="deadline-list">
+                                <li>
+                                    <div class="deadline-date">Nov 20</div>
+                                    <div class="deadline-info">
+                                        <h3>Midterm Grades Due</h3>
+                                        <span>Mathematics 10</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="deadline-date">Nov 25</div>
+                                    <div class="deadline-info">
+                                        <h3>Final Exam Schedule</h3>
+                                        <span>Submit to Office</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- Quick Actions -->
+                        <div class="dashboard-card compact">
+                            <div class="card-header">
+                                <h3><i class="fas fa-bolt"></i> Quick Actions</h3>
+                            </div>
+                            <div class="action-buttons">
+                                <button class="action-btn">
+                                    <i class="fas fa-upload"></i>
+                                    Submit Grades
+                                </button>
+                                <button class="action-btn">
+                                    <i class="fas fa-calendar-plus"></i>
+                                    Add Announcement
+                                </button>
+                                <button class="action-btn">
+                                    <i class="fas fa-file-export"></i>
+                                    Generate Report
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- Other Sections -->
+        <section id="schedule">
+            <h2>Your Schedule</h2>
+            <p>View your class schedule and important dates here.</p>
+            <!-- Schedule content would go here -->
+        </section>
+        
+        <section id="schoolbalance">
+            <h2>School Balance</h2>
+            <p>Check your current balance and payment history.</p>
+            <!-- Balance content would go here -->
+        </section>
+
+        <section id="grades">
+            <h2>Academic Grades</h2>
+            <p>View your current and past academic performance.</p>
+            <!-- Grades content would go here -->
+        </section>
+
+        <section id="profile">
+            <h2>Student Profile</h2>
+            <p>Manage your personal information and settings.</p>
+            <!-- Profile content would go here -->
+        </section>
+
+        <section id="admission">
+            <h2>Admission Information</h2>
+            <p>Learn about the admission process and requirements.</p>
+            <!-- Admission content would go here -->
+        </section>
+
+
+        <section id="about">
+            <h2>About the School</h2>
+            <p>Learn more about Holy Family Academy of Sta Maria Bulacan Inc.</p>
+            <!-- About content would go here -->
+        </section>
+        </main>
+        </div>
+
+        <script src="teacher.js"></script>
+    </body>
+
+</html>

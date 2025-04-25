@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Zen+Antique+Soft&display=swap');
+
+/* Base Styles */
+  /* for navigation design */
+  header{
+    width: 100%;
+    background: linear-gradient(to right, #347605, #5ba803);
+    position: fixed;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+
+
+}
+*{
+  font-family: 'Josefin Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    background-color: #f5f5f5;
+
+  }
+.logo img{
+    width: 80px;
+    padding: 10px;
+}
+.logo{
+  display: flex;
+  align-items: center;
+}
+.navbar .schoolname{
+  font-size: larger;
+}
+
+header .navbar {
+    color: #e7e7e7;
+    align-items: center;
+    display: flex;
+    padding: 5px 15px;
+}
+header .schoolname {
+    font-size: 1.5rem;
+    margin-left: 10px;
+    position: relative;
+    padding-left: 30px;
+}
+/* Application Form Styles */
+.application-form {
+    padding: 2rem 0;
+}
+.section-container {
+    margin-top: 90px;
+    padding: 0 1rem;
+}
+.section-container h2 {
+    font-size: 2rem;
+    margin-bottom: 4rem;
+    color: #1f6e15;
+    text-align: center;
+}
+.return-link {
+    display: block;
+    margin-bottom: 2rem;
+    color: #1f6e15;
+    text-decoration: none;
+}
+
+.admission-form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #1f6e15;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.enroll-btn, .cta-btn {
+    margin-top: 1rem;
+    width: 100%;
+    justify-content: center;
+}
+
+.enroll-btn i, .cta-btn i {
+    margin-left: 0.5rem;
+}
+.requirments{
+    margin: 0 0 1rem 0;
+    padding: 0.5rem;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+.requirments ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.requirments ul li{
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
